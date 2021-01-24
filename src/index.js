@@ -12,7 +12,7 @@ import burgerBuilderReducer from './store/reducers/burgerBuilder';
 import orderReducer from './store/reducers/order';
 import authReducer from './store/reducers/auth';
 
-const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose;
+const composeEnhancers = (process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null) || compose;
 //process.env.NODE_ENV === 'development' - redux devtool only available in the developement environemnt so that anyone e.g., from production cant check the state through devtools 
 
 const rootReducer = combineReducers({
@@ -21,7 +21,8 @@ const rootReducer = combineReducers({
   auth: authReducer
 });
 
-const store = createStore(rootReducer, composeEnhancers( applyMiddleware(thunk) )); // createStore method from redux and pass reducer to it
+const store = createStore(rootReducer, composeEnhancers( applyMiddleware(thunk) )); 
+// createStore method from redux and pass reducer to it
 
 const app = (
   <Provider store={store}>

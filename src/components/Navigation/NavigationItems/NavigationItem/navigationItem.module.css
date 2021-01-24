@@ -9,7 +9,7 @@
 
 .NavigationItem a {
     /* color: #8f5c2c; */
-    color: #4dff88;
+    color: #006622;
     text-decoration: none;
     width: 100%;
     box-sizing: border-box;
@@ -45,8 +45,8 @@
     .NavigationItem a:active,
     .NavigationItem a.active {
         /* background-color: #8f5c2c;*/
-        background-color: #4dff88;
-        border-bottom: 4px solid #40a4c8;
+        background-color: #006622;
+        border-bottom: 4px solid #e1f0e5;
         color: white;
     }
 }
